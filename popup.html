@@ -1,0 +1,6 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CEO SWAP</title><link rel="stylesheet" href="popup.css"></head><body>
+<header><div><b>CEO SWAP</b><small>AI Passport ⇄ ChatGPT Pair Bridge</small></div><span id="statusDot">●</span></header>
+<section><label>Project</label><select id="project"></select><div class="grid"><input id="projectName" placeholder="ชื่อโปรเจ็ค"><input id="projectPath" placeholder="D:\AI-Workspace\project"></div><div class="buttons compact"><button id="saveProject">บันทึก Project</button><button id="deleteProject" class="danger">ลบ</button></div></section>
+<section><label>Pair / Matching</label><div class="pairbox"><b id="pairCode">NO PAIR</b><span id="pairState">ยังไม่เชื่อม</span></div><div id="pairMeta" class="meta">ต้องเปิด AI Passport แล้วเชื่อม ChatGPT</div><div class="buttons"><button id="resetPair">ยกเลิก Pair</button><button id="connectChatGPT" class="primary">เชื่อม ChatGPT</button></div></section>
+<section><label>Draft ล่าสุด</label><textarea id="prompt" readonly placeholder="ยังไม่มี Draft"></textarea><div id="meta" class="meta">ส่งข้อความจากปุ่ม SWAP บนหน้า AI Passport</div></section>
+<footer id="message">Project ID + Pair ID + Tab ID ต้องตรงกันก่อนส่ง</footer><script src="popup.js"></script></body></html>

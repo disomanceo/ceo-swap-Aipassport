@@ -1,0 +1,12 @@
+{
+  "name": "ceo-swap-aipassport",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "smoke": "node scripts/smoke-background.mjs",
+    "test": "npm run validate && npm run smoke",
+    "check": "npm test"
+  }
+}
