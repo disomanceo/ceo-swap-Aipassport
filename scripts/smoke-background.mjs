@@ -3,7 +3,7 @@ let messageListener = null;
 let removedListener = null;
 const sentMessages = [];
 const tabs = [
-  { id: 10, url: 'https://aipass.go.th/workspace', active: true }
+  { id: 10, url: 'https://de.aipass.net/chat', active: true }
 ];
 let nextTabId = 42;
 
@@ -114,7 +114,7 @@ const outbound = await send({
   prompt: 'Smoke test prompt from AI Passport',
   pairId: bridge.pairId,
   projectId: bridge.projectId,
-  sourceUrl: 'https://aipass.go.th/workspace'
+  sourceUrl: 'https://de.aipass.net/chat'
 }, 10);
 if (!outbound.ok) throw new Error(outbound.error);
 const deliveredToChatgpt = sentMessages.some(row => row.id === 42 && row.message?.type === 'SWAP_RECEIVE_FROM_AIPASS');

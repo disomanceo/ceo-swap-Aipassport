@@ -6,7 +6,7 @@ const DEFAULT_PROJECT = {
 
 const CHATGPT_URL = 'https://chatgpt.com/';
 const CHATGPT_RE = /^https:\/\/(chatgpt\.com|chat\.openai\.com)\//i;
-const AIPASS_RE = /^https:\/\/(www\.)?aipass\.go\.th\//i;
+const AIPASS_RE = /^https:\/\/((www\.)?aipass\.go\.th|([a-z0-9-]+\.)*aipass\.net)\//i;
 
 async function getStored() {
   return chrome.storage.local.get(['settings', 'draft', 'returnDraft', 'bridge', 'lastInjected']);

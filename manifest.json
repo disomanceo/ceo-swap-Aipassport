@@ -1,12 +1,17 @@
 {
   "manifest_version": 3,
   "name": "CEO SWAP — AI Passport ⇄ ChatGPT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Pair TH-AI Passport and ChatGPT by Project ID, Pair ID and browser tabs, then exchange prompts in both directions without auto-send.",
-  "permissions": ["storage", "tabs", "activeTab"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
   "host_permissions": [
     "https://aipass.go.th/*",
     "https://www.aipass.go.th/*",
+    "https://*.aipass.net/*",
     "https://chatgpt.com/*",
     "https://chat.openai.com/*"
   ],
@@ -19,13 +24,24 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://aipass.go.th/*", "https://www.aipass.go.th/*"],
-      "js": ["content-aipass.js"],
+      "matches": [
+        "https://aipass.go.th/*",
+        "https://www.aipass.go.th/*",
+        "https://*.aipass.net/*"
+      ],
+      "js": [
+        "content-aipass.js"
+      ],
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
-      "js": ["content-chatgpt.js"],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "content-chatgpt.js"
+      ],
       "run_at": "document_idle"
     }
   ]
